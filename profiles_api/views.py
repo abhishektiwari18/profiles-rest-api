@@ -28,7 +28,7 @@ class UserProfileFeedViewSet(viewsets.ModelViewSet):
         permissions.UpdateOwnStatus,
         IsAuthenticatedOrReadOnly
     )"""
-	permission_classes = (permissions.PostOwnStatus, IsAuthenticated)
+    permission_classes = (permissions.UpdateOwnStatus, IsAuthenticated)
 
     def perform_create(self, serializer):
         """Sets the user profile to the logged in user"""
